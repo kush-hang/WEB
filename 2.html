@@ -436,12 +436,40 @@
             <dd>A number System with a base value of 16 is known as Hexadecimal Number System. It uses 16 digits for the creation of its numbers. Digits from 0-9 are taken like the digits in the decimal number system but the digits from 10-15 are represented as A-F i.e. 10 is represented as A, 11 as B, 12 as C, 13 as D, 14 as E, and 15 as F.</dd>
           </dl>
         </dd>
-        <dt>What is the One’s and Two’s complement method for binary subtraction?</dt>
-        <dd></dd>
-        <dt>Define Boolean algebra and its significance in computer science.</dt>
-        <dt>What are the main logical operations in Boolean algebra, and how are they represented?</dt>
-        <dt>Explain the concept of a truth table and its application in Boolean logic.</dt>
-        <dt>What are the laws of Boolean algebra, and how are they used in simplifying expressions?</dt>
+        <dl>
+          <dt>What is the One’s and Two’s complement method for binary subtraction?</dt>
+          <dd>The One’s complement method for binary subtraction involves flipping all the bits of the number to be subtracted (the subtrahend). This creates the One’s complement of that number. To perform the subtraction, you then add this One’s complement to the minuend (the number from which another number is subtracted). If there is a carry generated from the most significant bit, it is discarded. The Two’s complement method improves upon this by adding 1 to the One’s complement. This means that to subtract a binary number using Two’s complement, you take the Two’s complement of the subtrahend and add it to the minuend. This method not only simplifies the subtraction operation but also allows for straightforward binary arithmetic without needing to consider sign bits separately, as the Two’s complement representation allows for both positive and negative numbers.</dd>
+
+          <dt>Define Boolean algebra and its significance in computer science.</dt>
+          <dd>Boolean algebra is a branch of mathematics that deals with variables that have two possible values: true and false, often represented as 1 and 0, respectively. It is foundational in computer science, particularly in the design and analysis of digital circuits and algorithms. Boolean algebra provides the mathematical framework for logical reasoning and enables the simplification of complex logical expressions, which is crucial in optimizing hardware and software systems. Its significance extends to various areas, including programming, database search queries, and digital logic design, where it helps in implementing logic gates and circuits that perform a variety of operations based on logical conditions.</dd>
+
+          <dt>What are the main logical operations in Boolean algebra, and how are they represented?</dt>
+          <dd>
+            The main logical operations in Boolean algebra are:
+            <ul>
+              <li><strong>AND (∧)</strong>: This operation outputs true only if both operands are true. It is typically represented by the multiplication operator (e.g., A & B).</li>
+              <li><strong>OR (∨)</strong>: This operation outputs true if at least one of the operands is true. It is represented by the addition operator (e.g., A + B).</li>
+              <li><strong>NOT (¬)</strong>: This unary operation outputs the inverse of the operand. If the operand is true, it outputs false, and vice versa. It is represented by a bar over the variable or by the symbol ~ (e.g., ¬A or ~A).</li>
+            </ul>
+          </dd>
+
+          <dt>Explain the concept of a truth table and its application in Boolean logic.</dt>
+          <dd>A truth table is a tabular representation that lists all possible values of logical variables and the corresponding output of a logical expression. Each row of the table represents a possible combination of inputs, while the columns show the results of the logical operations. Truth tables are used extensively in Boolean logic to evaluate the validity of logical expressions, to design circuits, and to simplify expressions. They help in visualizing how different inputs affect the output, making them essential for understanding and analyzing logical functions in digital systems.</dd>
+
+          <dt>What are the laws of Boolean algebra, and how are they used in simplifying expressions?</dt>
+          <dd>
+            The laws of Boolean algebra include:
+            <ul>
+              <li><strong>Identity Law</strong>: A + 0 = A and A · 1 = A</li>
+              <li><strong>Null Law</strong>: A + 1 = 1 and A · 0 = 0</li>
+              <li><strong>Idempotent Law</strong>: A + A = A and A · A = A</li>
+              <li><strong>Complement Law</strong>: A + ¬A = 1 and A · ¬A = 0</li>
+              <li><strong>Distributive Law</strong>: A · (B + C) = A · B + A · C</li>
+              <li><strong>De Morgan's Theorems</strong>: ¬(A · B) = ¬A + ¬B and ¬(A + B) = ¬A · ¬B</li>
+            </ul>
+            These laws are crucial for simplifying Boolean expressions, allowing for more efficient designs in digital circuits. By applying these laws, complex expressions can be reduced to simpler forms, which can lead to fewer gates in hardware implementations and thus lower costs and improved performance.
+          </dd>
+        </dl>
       </dl>
     </div>
   </div>

@@ -298,22 +298,117 @@
 
     <img src="flow.jpg" alt="Example of Flowchart" style="width:50%; height:auto;">
     <br><br>
-    <ol>
-        <li>What is a programming language, and why is it important for user-computer communication?</li>
-        <li>Describe the differences between low-level languages and high-level languages.</li>
-        <li>What are the advantages and disadvantages of using machine-level language?</li>
-        <li>Explain the roles of assemblers, compilers, and interpreters in programming.</li>
-        <li>What are the main differences between a compiler and an interpreter?</li>
-        <li>Define syntax and semantics in the context of programming languages.</li>
-        <li>What are the three types of errors commonly encountered in programming? Provide examples for each.</li>
-        <li>Explain the significance of data types in programming and list some common data types.</li>
-        <li>What is the difference between a variable and a constant?</li>
-        <li>Describe the purpose of operands and operators in programming, providing examples.</li>
-        <li>What are the commonly used types of operators in programming?</li>
-        <li>Define an algorithm and list the rules for writing a good algorithm.</li>
-        <li>What is a flowchart, and how is it used in program design?</li>
-        <li>Identify and explain the symbols commonly used in flowcharts.</li>
-    </ol>
+    <dl>
+        <dt>What is a programming language, and why is it important for user-computer communication?</dt>
+        <dd>
+            A programming language is a formal set of instructions that can be used to produce various kinds of output, including software applications, algorithms, and scripts. It serves as a medium through which humans can communicate with computers, enabling the specification of tasks and operations that the computer must perform. Programming languages are essential for user-computer communication because they provide the syntax and semantics needed to translate human logic into machine-readable code, facilitating the development of software solutions that meet user needs.
+        </dd>
+    
+        <dt>Describe the differences between low-level languages and high-level languages.</dt>
+        <dd>
+            Low-level languages, such as assembly language and machine code, are closely related to the hardware architecture of a computer. They provide little abstraction and require detailed management of system resources. High-level languages, like Python, Java, and C++, offer more abstraction, making them easier to read and write. They allow developers to focus on problem-solving rather than hardware specifics. In summary:
+            <ul>
+                <li><strong>Low-Level Languages</strong>: Hardware-specific, less abstraction, faster execution, harder to learn.</li>
+                <li><strong>High-Level Languages</strong>: More abstraction, easier to learn, portable across platforms, slower execution compared to low-level languages.</li>
+            </ul>
+        </dd>
+    
+        <dt>What are the advantages and disadvantages of using machine-level language?</dt>
+        <dd>
+            <strong>Advantages of Machine-Level Language:</strong>
+            <ul>
+                <li>Highly efficient and fast execution since it is directly executed by the CPU.</li>
+                <li>Allows for precise control over hardware and system resources.</li>
+            </ul>
+            <strong>Disadvantages of Machine-Level Language:</strong>
+            <ul>
+                <li>Difficult to read and write, making programming time-consuming and error-prone.</li>
+                <li>Not portable across different hardware architectures.</li>
+            </ul>
+        </dd>
+    
+        <dt>Explain the roles of assemblers, compilers, and interpreters in programming.</dt>
+        <dd>
+            <ul>
+                <li><strong>Assemblers</strong>: Convert assembly language code into machine code, enabling the execution of programs on hardware.</li>
+                <li><strong>Compilers</strong>: Translate high-level programming languages into machine code or intermediate code in a single batch, creating an executable file for later use.</li>
+                <li><strong>Interpreters</strong>: Execute high-level programming languages line-by-line, translating them into machine code at runtime, without generating a separate executable file.</li>
+            </ul>
+        </dd>
+    
+        <dt>What are the main differences between a compiler and an interpreter?</dt>
+        <dd>
+            <ul>
+                <li><strong>Execution Method</strong>: A compiler translates the entire program before execution, while an interpreter translates and executes it line-by-line.</li>
+                <li><strong>Output</strong>: Compilers produce an executable file, whereas interpreters directly execute the code without producing a file.</li>
+                <li><strong>Error Detection</strong>: Compilers detect errors in the entire code before execution, while interpreters identify errors as they execute each line.</li>
+                <li><strong>Speed</strong>: Compiled programs typically run faster than interpreted programs due to the pre-translation into machine code.</li>
+            </ul>
+        </dd>
+    
+        <dt>Define syntax in the context of programming languages.</dt>
+        <dd>
+            Syntax in programming languages refers to the set of rules that define the structure and format of valid statements and expressions. It dictates how code must be written for the compiler or interpreter to understand it. For example, in Python, a valid print statement must follow the correct syntax: <code>print("Hello, World!")</code>. Adhering to the syntax is crucial for avoiding errors and ensuring that the code executes as intended.
+        </dd>
+    
+        <dt>What are the three types of errors commonly encountered in programming? Provide examples for each.</dt>
+        <dd>
+            The three common types of errors are:
+            <ul>
+                <li><strong>Syntax Errors</strong>: Occur when the code does not conform to the language's syntax rules. Example: Missing a parenthesis in <code>print("Hello, World!"</code>).</li>
+                <li><strong>Runtime Errors</strong>: Happen during program execution, often due to illegal operations. Example: Division by zero in <code>x = 5 / 0</code>.</li>
+                <li><strong>Logic Errors</strong>: These occur when the code runs without crashing but produces incorrect results. Example: Using the wrong formula to calculate the area of a circle.</li>
+            </ul>
+        </dd>
+    
+        <dt>Explain the significance of data types in programming and list some common data types.</dt>
+        <dd>
+            Data types are crucial in programming as they define the kind of data that can be stored and manipulated within a program. They determine how much space is allocated in memory and the operations that can be performed on the data. Common data types include:
+            <ul>
+                <li><strong>Integer</strong>: Whole numbers (e.g., 1, -5, 42).</li>
+                <li><strong>Float</strong>: Decimal numbers (e.g., 3.14, -0.001).</li>
+                <li><strong>String</strong>: Sequences of characters (e.g., "Hello, World!").</li>
+                <li><strong>Boolean</strong>: True or false values.</li>
+            </ul>
+        </dd>
+    
+        <dt>What is the difference between a variable and a constant?</dt>
+        <dd>
+            A <strong>variable</strong> is a named storage location in memory that can hold different values during the program's execution. Its value can change. For example, <code>age = 25</code> assigns the value 25 to the variable age. 
+    
+            A <strong>constant</strong>, on the other hand, is a named storage location that holds a value that cannot change during the program's execution. For example, <code>PI = 3.14</code> defines a constant value for PI.
+        </dd>
+    
+        <dt>Describe the purpose of operands and operators in programming, providing examples.</dt>
+        <dd>
+            Operands are the values or variables on which operators perform operations. Operators are symbols that specify the type of operation to be performed on the operands. For example:
+            <ul>
+                <li><strong>Arithmetic Operators</strong>: + (addition), - (subtraction), * (multiplication), / (division). In <code>result = a + b</code>, <code>a</code> and <code>b</code> are operands, and <code>+</code> is the operator.</li>
+                <li><strong>Comparison Operators</strong>: == (equal to), != (not equal to), > (greater than), < (less than). In <code>if a > b:</code>, <code>a</code> and <code>b</code> are operands, and <code>></code> is the operator.</li>
+            </ul>
+        </dd>
+    
+        <dt>What are the commonly used types of operators in programming?</dt>
+        <dd>
+            Commonly used types of operators include:
+            <ul>
+                <li><strong>Arithmetic Operators</strong>: Perform mathematical calculations (e.g., +, -, *, /).</li>
+                <li><strong>Comparison Operators</strong>: Compare two values (e.g., ==, !=, >, <).</li>
+                <li><strong>Logical Operators</strong>: Perform logical operations (e.g., AND, OR, NOT).</li>
+                <li><strong>Assignment Operators</strong>: Assign values to variables (e.g., =, +=, -=).</li>
+            </ul>
+        </dd>   
+        <dt>What is a flowchart, and how is it used in program design?</dt>
+        <dd>
+            A <strong>flowchart</strong> is a graphical representation of a process or algorithm, using symbols and arrows to illustrate the flow of control or data. It uses various shapes to represent different types of actions, such as:
+            <ul>
+                <li><strong>Oval</strong>: Start and end points.</li>
+                <li><strong>Rectangle</strong>: Process or operation steps.</li>
+                <li><strong>Diamond</strong>: Decision points that require a yes/no or true/false answer.</li>
+            </ul>
+            Flowcharts are used in program design to visualize the steps involved in a process, making it easier to understand, analyze, and communicate complex algorithms before actual coding begins.
+        </dd>
+    </dl>
 </div>
 
 </body>
