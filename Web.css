@@ -52,6 +52,10 @@
     text-align: left;
   }
 }
+
+body {
+  max-width: 1800px;
+}
 .body {
   margin: 100px;
   margin-left: 300px;
