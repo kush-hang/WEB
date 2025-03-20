@@ -1,191 +1,448 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head><title>Chapter 2</title>
-<link rel="stylesheet" href="Web.css"></head>
+  <head>
+    <title>Chapter 2</title>
+    <link rel="stylesheet" href="Web.css" />
+  </head>
 
-<div class="sidenav">
-<a href="Web.html">Home</a>
-<a href="1.html">Chapter 1</a>
-<a class="active" href="2.html">Chapter 2</a>
-<a href="3.html">Chapter 3</a>
-<a href="4.html">Chapter 4</a>
-<a href="5.html">Chapter 5</a>
-<a href="6.html">Chapter 6</a>
-<a href="7.html">Chapter 7</a>
-<a href="8.html">Chapter 8</a>
-</div>
+  <div class="sidenav">
+    <a href="Web.html">Home</a>
+    <a href="1.html">Chapter 1</a>
+    <a class="active" href="2.html">Chapter 2</a>
+    <a href="3.html">Chapter 3</a>
+    <a href="4.html">Chapter 4</a>
+    <a href="5.html">Chapter 5</a>
+    <a href="6.html">Chapter 6</a>
+    <a href="7.html">Chapter 7</a>
+    <a href="8.html">Chapter 8</a>
+  </div>
 
-<div class="body">
-<div class="main">Number System, Conversion and Boolean Logic</div>
-<h1>Introduction: Boolean Logic</h1>
-<div>Boolean Algebra is algebra of logic, which deals with the study of binary variables and logical operation. As every data are represented in terms  binary values, we need to manipulate those values by using some certain rules and expression which we can do through Boolean algebra. It is most common and basic method to analysis and design logic circuit. It was introduced by an English mathematician George Boole. In Boolean algebra the variables can have only one of the two possible value 0 and1 (False or True). Every modern digital computers understand either this two values.</div>
-<dl>
-    <dt>Boolean algebra:</dt>
-    <dd>It is algebra of logic which could accept either of the possible two values 0 and 1 and generate a result through logical relationship and operation.</dd>
-    <dt>Boolean variable:</dt>
-    <dd>Those entities which has either or 0 and 1 and denote some specific operation ore known as boolean variable. Simply, it is an entity in Boolean algebra which has only either of the two possible values. This variable are denoted by A, B, P, Q, X, Y, Z….</dd>
-    <dt>Boolean function (logic functions):</dt>
-    <dd>Boolean function is an expression formed by binary variables, binary operators such as AND, OR, NOT, parentheses, and equal sign for a given set of value this boolean function gives the 0 or 1 as a result.
-        let us consider,<br>
-        F = XYZ’+XY<br><br>
-        Where, F is a boolean function<br><br>
-        X, Y, Z are a boolean variable<br><br>
-        X, Y, Z, Z’ are also literals.<br><br>
-    </dd>
-    <dt>Truth Table:</dt>
-    <dd>A table which represents the input-output  relationship between of the binary variables for each logical gate called truth table. It shows the relationship between input and output in tabular form. Thus, truth table is table representing the results the logical operation of the logical operation on all possible combination of logical values.</dd>
-    <dt>Boolean Operator and Operands</dt>
-    <dd>Operators are the symbols that define the specific operation. These are three basic operators used in Boolean Algebra, ie. AND, OR, NOT. Every other operations can be expressed in terms of this basic operation. For examples, NOR operator is the combination of NOT and OR operators. The three basic operators are:
-        <dl><dt>a. AND Operators:</dt> 
-            <dd>AND operator is represented by “.” So, A AND B is represented by (A.B) . The  result of the AND operation is exactly same as simple arithmetic multiplication. That means result will be high (1) only when both the inputs are high. Note: A AND B can also represented bu  AˆB or AnB. Truth table of AND operation is given below
-                <br><br><br><br>
+  <div class="body">
+    <div class="main">Number System, Conversion and Boolean Logic</div>
+    <h1>Introduction: Boolean Logic</h1>
+    <div>Boolean Algebra is algebra of logic, which deals with the study of binary variables and logical operation. As every data are represented in terms binary values, we need to manipulate those values by using some certain rules and expression which we can do through Boolean algebra. It is most common and basic method to analysis and design logic circuit. It was introduced by an English mathematician George Boole. In Boolean algebra the variables can have only one of the two possible value 0 and1 (False or True). Every modern digital computers understand either this two values.</div>
+    <dl>
+      <dt>Boolean algebra:</dt>
+      <dd>It is algebra of logic which could accept either of the possible two values 0 and 1 and generate a result through logical relationship and operation.</dd>
+      <dt>Boolean variable:</dt>
+      <dd>Those entities which has either or 0 and 1 and denote some specific operation ore known as boolean variable. Simply, it is an entity in Boolean algebra which has only either of the two possible values. This variable are denoted by A, B, P, Q, X, Y, Z….</dd>
+      <dt>Boolean function (logic functions):</dt>
+      <dd>
+        Boolean function is an expression formed by binary variables, binary operators such as AND, OR, NOT, parentheses, and equal sign for a given set of value this boolean function gives the 0 or 1 as a result. let us consider,<br />
+        F = XYZ’+XY<br /><br />
+        Where, F is a boolean function<br /><br />
+        X, Y, Z are a boolean variable<br /><br />
+        X, Y, Z, Z’ are also literals.<br /><br />
+      </dd>
+      <dt>Truth Table:</dt>
+      <dd>A table which represents the input-output relationship between of the binary variables for each logical gate called truth table. It shows the relationship between input and output in tabular form. Thus, truth table is table representing the results the logical operation of the logical operation on all possible combination of logical values.</dd>
+      <dt>Boolean Operator and Operands</dt>
+      <dd>
+        Operators are the symbols that define the specific operation. These are three basic operators used in Boolean Algebra, ie. AND, OR, NOT. Every other operations can be expressed in terms of this basic operation. For examples, NOR operator is the combination of NOT and OR operators. The three basic operators are:
+        <dl>
+          <dt>a. AND Operators:</dt>
+          <dd>
+            AND operator is represented by “.” So, A AND B is represented by (A.B) . The result of the AND operation is exactly same as simple arithmetic multiplication. That means result will be high (1) only when both the inputs are high. Note: A AND B can also represented bu AˆB or AnB. Truth table of AND operation is given below <br /><br /><br /><br />
             <div class="table-width">
-                <table>
-                 <tr><td>A</td><td>B</td><td class="wide-row">Y=A.B</td></tr>
-                 <tr><td>0</td><td>0</td><td class="wide-row">0</td></tr>
-                 <tr><td>0</td><td>1</td><td class="wide-row">0</td></tr>
-                 <tr><td>1</td><td>0</td><td class="wide-row">0</td></tr>
-                 <tr><td>1</td><td>1</td><td class="wide-row">1</td></tr>
-                </table>
+              <table>
+                <tr>
+                  <td>A</td>
+                  <td>B</td>
+                  <td class="wide-row">Y=A.B</td>
+                </tr>
+                <tr>
+                  <td>0</td>
+                  <td>0</td>
+                  <td class="wide-row">0</td>
+                </tr>
+                <tr>
+                  <td>0</td>
+                  <td>1</td>
+                  <td class="wide-row">0</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>0</td>
+                  <td class="wide-row">0</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>1</td>
+                  <td class="wide-row">1</td>
+                </tr>
+              </table>
             </div>
-            </dd>
-            <br><br>
-            <dt>b. OR Operator:</dt>
-            <dd>
-                OR operator is represented by “+” So, A OR B is represented by (A+B) . The  result of the OR operation is exactly same as simple arithmetic addition. That means result will be low (0) if and only both the inputs are low. Note: A OR B can also represented bu  AvB or AuB. Truth table of AND operation is given below
-                <br><br><br><br>
-                <div class="table-width">
-                    <table>
-                     <tr><td>A</td><td>B</td><td class="wide-row">Y=A+B</td></tr>
-                     <tr><td>0</td><td>0</td><td class="wide-row">0</td></tr>
-                     <tr><td>0</td><td>1</td><td class="wide-row">1</td></tr>
-                     <tr><td>1</td><td>0</td><td class="wide-row">1</td></tr>
-                     <tr><td>1</td><td>1</td><td class="wide-row">1</td></tr>
-                    </table>
-                </div>
-            </dd>
-            <br><br>
-            <dt>c. NOT Operator:</dt>
-            <dd>
-                NOT Gate is another fundamental gate whose result is complement of its input. It is also called inverter. It produces low-0 logic for high-1 input and vice-versa. This Gate has single input and single output. Graphically NOT gate is represented as:
-                <br><br><br><br>
-                <div class="table-width">
-                    <table>
-                     <tr><td>A</td><td>A'</td></tr>
-                     <tr><td>0</td><td>1</td></tr>
-                     <tr><td>1</td><td>0</td></tr>
-                    </table>
-                </div>
-            </dd>
-            <br><br>
-            <dt>d. NAND Gate:</dt>
-            <dd>NAND gate is a derived gate, derived from NOT and AND gate. This gate reciprocal the output obtain from the AND gate. That means it will produce low-0 output when both the inputs are high-1 and produce high-1 output when any one of the input is low-0. These gate also may have two or more than two and a single output.
-            <br><br><br><br>
-            <div class="table-width" style="margin-left: 200px;">
-                <table style="width: 300px;">
-                 <tr><td>A</td><td>B</td><td>A.B</td><td class="wide-row">Y=(A.B)'</td></tr>
-                 <tr><td>0</td><td>0</td><td>0</td><td class="wide-row">1</td></tr>
-                 <tr><td>0</td><td>1</td><td>0</td><td class="wide-row">1</td></tr>
-                 <tr><td>1</td><td>0</td><td>0</td><td class="wide-row">1</td></tr>
-                 <tr><td>1</td><td>1</td><td>1</td><td class="wide-row">0</td></tr>
-                </table>
+          </dd>
+          <br /><br />
+          <dt>b. OR Operator:</dt>
+          <dd>
+            OR operator is represented by “+” So, A OR B is represented by (A+B) . The result of the OR operation is exactly same as simple arithmetic addition. That means result will be low (0) if and only both the inputs are low. Note: A OR B can also represented bu AvB or AuB. Truth table of AND operation is given below
+            <br /><br /><br /><br />
+            <div class="table-width">
+              <table>
+                <tr>
+                  <td>A</td>
+                  <td>B</td>
+                  <td class="wide-row">Y=A+B</td>
+                </tr>
+                <tr>
+                  <td>0</td>
+                  <td>0</td>
+                  <td class="wide-row">0</td>
+                </tr>
+                <tr>
+                  <td>0</td>
+                  <td>1</td>
+                  <td class="wide-row">1</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>0</td>
+                  <td class="wide-row">1</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>1</td>
+                  <td class="wide-row">1</td>
+                </tr>
+              </table>
             </div>
-        </dd>
-        <dt>e. NOR gate: </dt>
-        <dd>
+          </dd>
+          <br /><br />
+          <dt>c. NOT Operator:</dt>
+          <dd>
+            NOT Gate is another fundamental gate whose result is complement of its input. It is also called inverter. It produces low-0 logic for high-1 input and vice-versa. This Gate has single input and single output. Graphically NOT gate is represented as:
+            <br /><br /><br /><br />
+            <div class="table-width">
+              <table>
+                <tr>
+                  <td>A</td>
+                  <td>A'</td>
+                </tr>
+                <tr>
+                  <td>0</td>
+                  <td>1</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>0</td>
+                </tr>
+              </table>
+            </div>
+          </dd>
+          <br /><br />
+          <dt>d. NAND Gate:</dt>
+          <dd>
+            NAND gate is a derived gate, derived from NOT and AND gate. This gate reciprocal the output obtain from the AND gate. That means it will produce low-0 output when both the inputs are high-1 and produce high-1 output when any one of the input is low-0. These gate also may have two or more than two and a single output. <br /><br /><br /><br />
+            <div class="table-width" style="margin-left: 200px">
+              <table style="width: 300px">
+                <tr>
+                  <td>A</td>
+                  <td>B</td>
+                  <td>A.B</td>
+                  <td class="wide-row">Y=(A.B)'</td>
+                </tr>
+                <tr>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td class="wide-row">1</td>
+                </tr>
+                <tr>
+                  <td>0</td>
+                  <td>1</td>
+                  <td>0</td>
+                  <td class="wide-row">1</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td class="wide-row">1</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>1</td>
+                  <td>1</td>
+                  <td class="wide-row">0</td>
+                </tr>
+              </table>
+            </div>
+          </dd>
+          <dt>e. NOR gate:</dt>
+          <dd>
             NOR gate is a derived gate derived from the combination of OR gate and NOT gate. This gate reciprocal the output obtain from the OR gate. That means NOR gate will produce high-1 logic when both the inputs are low-0 and produce low output-0 in all possible combination of 0 and 1. These gate also may have two or more than two input at a single output.
-            <br><br>Algebraically output of NOR gate is represented as: Y: (A+B)’
-            <br><br>Truth Table of NOR gate is
-            <br><br><br><br>
-            <div class="table-width" style="margin-left: 200px;">
-                <table style="width: 300px;">
-                 <tr><td>A</td><td>B</td><td>A+B</td><td class="wide-row">Y=(A+B)'</td></tr>
-                 <tr><td>0</td><td>0</td><td>0</td><td class="wide-row">1</td></tr>
-                 <tr><td>0</td><td>1</td><td>1</td><td class="wide-row">0</td></tr>
-                 <tr><td>1</td><td>0</td><td>1</td><td class="wide-row">0</td></tr>
-                 <tr><td>1</td><td>1</td><td>1</td><td class="wide-row">0</td></tr>
-                </table>
+            <br /><br />Algebraically output of NOR gate is represented as: Y: (A+B)’ <br /><br />Truth Table of NOR gate is <br /><br /><br /><br />
+            <div class="table-width" style="margin-left: 200px">
+              <table style="width: 300px">
+                <tr>
+                  <td>A</td>
+                  <td>B</td>
+                  <td>A+B</td>
+                  <td class="wide-row">Y=(A+B)'</td>
+                </tr>
+                <tr>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td class="wide-row">1</td>
+                </tr>
+                <tr>
+                  <td>0</td>
+                  <td>1</td>
+                  <td>1</td>
+                  <td class="wide-row">0</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>0</td>
+                  <td>1</td>
+                  <td class="wide-row">0</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>1</td>
+                  <td>1</td>
+                  <td class="wide-row">0</td>
+                </tr>
+              </table>
             </div>
-        </dd>
-        <br><br>
-        <dt>f. Exclusive OR (X-OR): </dt>
-        <dd>
+          </dd>
+          <br /><br />
+          <dt>f. Exclusive OR (X-OR):</dt>
+          <dd>
             It is the type of digital electronic circuit will generates low-0 output when both the inputs are either low-0 or high-1. It will give high-1 output only when one of the given input is high. These gate also may have two or more the two input.
-            <br><br><br><br>
-            <div class="table-width" style="margin-left: 200px;">
-                <table style="width: 300px;">
-                 <tr><td>A</td><td>B</td><td>A+B</td><td class="wide-row">Y=(A+B)'</td></tr>
-                 <tr><td>0</td><td>0</td><td>0</td><td class="wide-row">1</td></tr>
-                 <tr><td>0</td><td>1</td><td>1</td><td class="wide-row">0</td></tr>
-                 <tr><td>1</td><td>0</td><td>1</td><td class="wide-row">0</td></tr>
-                 <tr><td>1</td><td>1</td><td>1</td><td class="wide-row">0</td></tr>
-                </table>
+            <br /><br /><br /><br />
+            <div class="table-width" style="margin-left: 200px">
+              <table style="width: 300px">
+                <tr>
+                  <td>A</td>
+                  <td>B</td>
+                  <td>A+B</td>
+                  <td class="wide-row">Y=(A+B)'</td>
+                </tr>
+                <tr>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td class="wide-row">1</td>
+                </tr>
+                <tr>
+                  <td>0</td>
+                  <td>1</td>
+                  <td>1</td>
+                  <td class="wide-row">0</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>0</td>
+                  <td>1</td>
+                  <td class="wide-row">0</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>1</td>
+                  <td>1</td>
+                  <td class="wide-row">0</td>
+                </tr>
+              </table>
             </div>
-        </dd>
-        <br><br>
-        <dt>g. Exclusive NOR (X-NOR): </dt>
-        <dd>
+          </dd>
+          <br /><br />
+          <dt>g. Exclusive NOR (X-NOR):</dt>
+          <dd>
             It is the type of digital electronic circuit will generates high-1 output when both the inputs are either low-0 or high-1. It will give low-0 output only when one of the given input is high-1. These gate also may have two or more the two input.
-            <br><br>Truth Table of X-NOR gate is
-            <br><br><br><br>
-            <div class="table-width" style="margin-left: 150px;">
-                <table style="width: 400px;">
-                 <tr><td>A</td><td>B</td><td>A'</td><td>B'</td><td>A.B</td><td>A'.B'</td><td class="wide-row">A.B+A'+B'</td></tr>
-                 <tr><td>0</td><td>0</td><td>1</td><td>1</td><td>0</td><td>1</td><td class="wide-row">1</td></tr>
-                 <tr><td>0</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td class="wide-row">0</td></tr>
-                 <tr><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td class="wide-row">0</td></tr>
-                 <tr><td>1</td><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td><td class="wide-row">0</td></tr>
-                </table>
+            <br /><br />Truth Table of X-NOR gate is <br /><br /><br /><br />
+            <div class="table-width" style="margin-left: 150px">
+              <table style="width: 400px">
+                <tr>
+                  <td>A</td>
+                  <td>B</td>
+                  <td>A'</td>
+                  <td>B'</td>
+                  <td>A.B</td>
+                  <td>A'.B'</td>
+                  <td class="wide-row">A.B+A'+B'</td>
+                </tr>
+                <tr>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>1</td>
+                  <td>1</td>
+                  <td>0</td>
+                  <td>1</td>
+                  <td class="wide-row">1</td>
+                </tr>
+                <tr>
+                  <td>0</td>
+                  <td>1</td>
+                  <td>1</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td class="wide-row">0</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>1</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td class="wide-row">0</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>1</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>1</td>
+                  <td>0</td>
+                  <td class="wide-row">0</td>
+                </tr>
+              </table>
             </div>
-        </dd>
+          </dd>
         </dl>
-    </dd>
-</dl>
-<br><br>
-<h1>De-Morgan's Theorem</h1>
-<dl>
-    <dt>First Theorem:</dt>
-    <dd>
-        The De-Morgan's first theorem states that, “The complement of a sum equals to the product of its complement.”<br>
-        It is represented as: (A+B)' = A'.B''<br>
+      </dd>
+    </dl>
+    <br /><br />
+    <h1>De-Morgan's Theorem</h1>
+    <dl>
+      <dt>First Theorem:</dt>
+      <dd>
+        The De-Morgan's first theorem states that, “The complement of a sum equals to the product of its complement.”<br />
+        It is represented as: (A+B)' = A'.B''<br />
         Proof:
-        <br><br><br><br>
-        <div class="table-width" style="margin-left: 150px;">
-            <table style="width: 400px;">
-             <tr><td>A</td><td>B</td><td>A'</td><td>B'</td><td>A+B</td><td>(A+B)'</td><td class="wide-row">A'.B'</td></tr>
-             <tr><td>0</td><td>0</td><td>1</td><td>1</td><td>0</td><td>1</td><td class="wide-row">1</td></tr>
-             <tr><td>0</td><td>1</td><td>1</td><td>0</td><td>1</td><td>0</td><td class="wide-row">0</td></tr>
-             <tr><td>1</td><td>0</td><td>0</td><td>1</td><td>1</td><td>0</td><td class="wide-row">0</td></tr>
-             <tr><td>1</td><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td><td class="wide-row">0</td></tr>
-            </table>
+        <br /><br /><br /><br />
+        <div class="table-width" style="margin-left: 150px">
+          <table style="width: 400px">
+            <tr>
+              <td>A</td>
+              <td>B</td>
+              <td>A'</td>
+              <td>B'</td>
+              <td>A+B</td>
+              <td>(A+B)'</td>
+              <td class="wide-row">A'.B'</td>
+            </tr>
+            <tr>
+              <td>0</td>
+              <td>0</td>
+              <td>1</td>
+              <td>1</td>
+              <td>0</td>
+              <td>1</td>
+              <td class="wide-row">1</td>
+            </tr>
+            <tr>
+              <td>0</td>
+              <td>1</td>
+              <td>1</td>
+              <td>0</td>
+              <td>1</td>
+              <td>0</td>
+              <td class="wide-row">0</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>0</td>
+              <td>0</td>
+              <td>1</td>
+              <td>1</td>
+              <td>0</td>
+              <td class="wide-row">0</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>1</td>
+              <td>0</td>
+              <td>0</td>
+              <td>1</td>
+              <td>0</td>
+              <td class="wide-row">0</td>
+            </tr>
+          </table>
         </div>
-    </dd>
-    <bR><br>
-    <dt>Second Theorem:</dt>
-    <dd>The De-Morgan's second theorem states that, “The complement of a product equals to the sum of its complement.”
-        <br>It is represented as: (A.B)' = A'+B''
-        <br>Proof:
-        <div class="table-width" style="margin-left: 150px;">
-            <table style="width: 400px;">
-             <tr><td>A</td><td>B</td><td>A'</td><td>B'</td><td>A.B</td><td>(A.B)'</td><td class="wide-row">A'+B'</td></tr>
-             <tr><td>0</td><td>0</td><td>1</td><td>1</td><td>0</td><td>1</td><td class="wide-row">1</td></tr>
-             <tr><td>0</td><td>1</td><td>1</td><td>0</td><td>0</td><td>1</td><td class="wide-row">1</td></tr>
-             <tr><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td><td>1</td><td class="wide-row">1</td></tr>
-             <tr><td>1</td><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td><td class="wide-row">0</td></tr>
-            </table>
+      </dd>
+      <br /><br />
+      <dt>Second Theorem:</dt>
+      <dd>
+        The De-Morgan's second theorem states that, “The complement of a product equals to the sum of its complement.” <br />It is represented as: (A.B)' = A'+B'' <br />Proof:
+        <div class="table-width" style="margin-left: 150px">
+          <table style="width: 400px">
+            <tr>
+              <td>A</td>
+              <td>B</td>
+              <td>A'</td>
+              <td>B'</td>
+              <td>A.B</td>
+              <td>(A.B)'</td>
+              <td class="wide-row">A'+B'</td>
+            </tr>
+            <tr>
+              <td>0</td>
+              <td>0</td>
+              <td>1</td>
+              <td>1</td>
+              <td>0</td>
+              <td>1</td>
+              <td class="wide-row">1</td>
+            </tr>
+            <tr>
+              <td>0</td>
+              <td>1</td>
+              <td>1</td>
+              <td>0</td>
+              <td>0</td>
+              <td>1</td>
+              <td class="wide-row">1</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>0</td>
+              <td>0</td>
+              <td>1</td>
+              <td>0</td>
+              <td>1</td>
+              <td class="wide-row">1</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>1</td>
+              <td>0</td>
+              <td>0</td>
+              <td>1</td>
+              <td>0</td>
+              <td class="wide-row">0</td>
+            </tr>
+          </table>
         </div>
-    </dd>
-</dl>
-<div>
-    <h2>Questions on Number System and Boolean Logic</h2>
-    <ol>
-        <li>Explain the different number systems: Decimal, Binary, Octal, and Hexadecimal.</li>
-        <li>How do you perform binary addition and subtraction?</li>
-        <li>What is the One’s and Two’s complement method for binary subtraction?</li>
-        <li>Define Boolean algebra and its significance in computer science.</li>
-        <li>What are the main logical operations in Boolean algebra, and how are they represented?</li>
-        <li>Explain the concept of a truth table and its application in Boolean logic.</li>
-        <li>What are the laws of Boolean algebra, and how are they used in simplifying expressions?</li>
-    </ol>
-</div>
-</div>
+      </dd>
+    </dl>
+    <div>
+      <h2>Questions on Number System and Boolean Logic</h2>
+      <dl>
+        <dt>Explain the different number systems: Decimal, Binary, Octal, and Hexadecimal.</dt>
+        <dd>
+          <dl>
+            <dt>Decimal Number System</dt>
+            <dd>A number system with a base value of 10 is termed a Decimal number system. It uses 10 digits i.e. 0-9 for the creation of numbers. Here, each digit in the number is at a specific place with a place value of a product of different powers of 10.</dd>
+            <dt>Binary Number System</dt>
+            <dd>A number System with a base value of 2 is termed a Binary number system. It uses 2 digits i.e. 0 and 1 for the creation of numbers. The numbers formed using these two digits are termed Binary Numbers. The binary number system is very useful in electronic devices and computer systems because it can be easily performed using just two states ON and OFF i.e. 0 and 1.</dd>
+            <dt>Octal Number System</dt>
+            <dd>Octal Number System is one in which the base value is 8. It uses 8 digits i.e. 0-7 for the creation of Octal Numbers.</dd>
+            <dt>Hexadecimal Number System</dt>
+            <dd>A number System with a base value of 16 is known as Hexadecimal Number System. It uses 16 digits for the creation of its numbers. Digits from 0-9 are taken like the digits in the decimal number system but the digits from 10-15 are represented as A-F i.e. 10 is represented as A, 11 as B, 12 as C, 13 as D, 14 as E, and 15 as F.</dd>
+          </dl>
+        </dd>
+        <dt>What is the One’s and Two’s complement method for binary subtraction?</dt>
+        <dd></dd>
+        <dt>Define Boolean algebra and its significance in computer science.</dt>
+        <dt>What are the main logical operations in Boolean algebra, and how are they represented?</dt>
+        <dt>Explain the concept of a truth table and its application in Boolean logic.</dt>
+        <dt>What are the laws of Boolean algebra, and how are they used in simplifying expressions?</dt>
+      </dl>
+    </div>
+  </div>
+</html>
