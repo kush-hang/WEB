@@ -251,6 +251,7 @@
 
     <h3>Types of Operators</h3>
     <div>Operators are special symbols that facilitate operations. Commonly used operators include:</div>
+       <dl> 
         <dt>Arithmetic Operators:</dt>
         <dd>+, -, /, *</dd>
 
@@ -260,6 +261,96 @@
         <dt>Logical Operators:</dt>
         <dd>AND, OR, NOT</dd>
     </dl>
+    </dl>
+
+    <div>
+        
+            <h1>Some Common Terms:</h1>
+            <dl>
+            <dd>Iterative Control Structure:<br>
+               <div>
+                A control structure is esssentially the direction of flow of the program.An iteration control structure, also known as a loop, is a programming construct that allows a block of code to be executed repeatedly until a specific condition is met or a certain number of times. 
+               There are three control statements (looping statements) in C. They are:
+               <dl>
+                <dt>1.for loop</dt>
+                <dd>The for statement is an iterative statement used to create a loop. The for statement combines initilization, condition and increment/decrement in a single statement.
+                    <br><br>Syntax:<br>for(initilization;condition;increment/decrement)<br>
+                    {<br>
+                        statement;<br>
+                    }
+                </dd>
+                E.g:
+                    <pre>
+#include&ltstdio.h&gt
+int main()
+{
+    int i;
+    for(i=0;i<=10;i++)
+    {
+        printf("%d",i);
+    }
+    return 0;
+}
+                    </pre>
+                <dt>2.While loop</dt>
+                <dd>The while statement is another iterative statement used to create a loop.Unlike the for statement it requires a sperate initilization and increment/decrement.<br>
+                <br>Syntax:<br>
+                initilization<br>
+                while(condition)<br>
+                {<br>
+                    statement;<br>
+                    increment/decremnet;<br>
+                }
+            </dd>
+            E.g:<br>
+            <pre>
+#include&ltstdio.h&gt
+int main()
+{
+    int i,n;
+    i=0;
+    while(i<=10)
+    {
+        n+=2;
+        printf("%d",n);
+    }
+    return 0;
+}
+            </pre>
+            <dt>3.do while loop</dt>
+            <dd>The do...while statement is another looping statement similar to the while statement. But unlike the while or for statemets the do....while statement will execute once even if the condition is false. This only works for the first run.<br>
+            <br>Syntax:<br>
+             initilization;<br>
+             do<br>
+             {<br>
+                statement;<br>
+                increment/decrement;<br>
+             }while(condition);
+        </dd>
+        E.g:<br>
+        <pre>
+#include&ltstdio.h&gt
+int main()
+{
+    int i,n;
+    i=0;
+    do
+    {
+        +=2;
+        printf("%d",n);
+    }while (i<=10);
+    return 0;
+}
+        </pre>
+               </dl>
+            </div>
+            </dd>
+        </dl>
+        <dl>
+            <dt>Array</dt>
+            <dd></dd>
+        </dl>
+    </div>
 
     <h3>Program Design Tool</h3>
     <div>There are several program design tools available. Some commonly used program design tools are algorithms, flowcharts, and pseudocode.</div>
