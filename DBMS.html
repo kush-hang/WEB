@@ -3,20 +3,33 @@
   <head>
     <title>Database Management System</title>
     <link rel="stylesheet" href="Web.css" />
+    <style>
+        td{
+            	border: solid black;
+	            border-collapse: collapse;
+                width: 15px;
+                text-align: center;
+        }
+    </style>
   </head>
   <body>
+    <div class="sidenav">
+<a href="Web.html">Home</a>
+<a href="DBMS.html" class="active">(Temporary Link)Chapter 1</a>
+</div>
+
     <div class="body" >
       <div style="width: 700px">
       <table>
-        <tr><th >S.N</th><th class="wide-row">Topic</th><th class="wide-row">Content Wise Marks</th><th class="wide-row">Working Hours</th></tr>
-        <tr><th></th><th class="wide-row"></th><th class="wide-row"></th><th class="wide-row"></th></tr>
-        <tr><th></th><th class="wide-row"></th><th class="wide-row"></th><th class="wide-row"></th></tr>
-        <tr><th></th><th class="wide-row"></th><th class="wide-row"></th><th class="wide-row"></th></tr>
-        <tr><th></th><th class="wide-row"></th><th class="wide-row"></th><th class="wide-row"></th></tr>
-        <tr><th></th><th class="wide-row"></th><th class="wide-row"></th><th class="wide-row"></th></tr>
-        <tr><th></th><th class="wide-row"></th><th class="wide-row"></th><th class="wide-row"></th></tr>
-        <tr><th></th><th class="wide-row"></th><th class="wide-row"></th><th class="wide-row"></th></tr>
-        <tr><th></th><th class="wide-row"></th><th class="wide-row"></th><th class="wide-row"></th></tr>
+        <tr><th>S.N</th><th class="wide-row">Topic</th><th class="wide-row">Content Wise Marks</th><th class="wide-row">Working Hours</th></tr>
+        <tr><td>1</td><td class="wide-row">Database Management System</td><td class="wide-row">8</td><td class="wide-row">12</td></tr>
+        <tr><td>2</td><td class="wide-row">Data communication and Networking</td><td class="wide-row">9</td><td class="wide-row">15</td></tr>
+        <tr><td>3</td><td class="wide-row">Web Tech-II</td><td class="wide-row">8</td><td class="wide-row">12</td></tr>
+        <tr><td>4</td><td class="wide-row">C Programming-II</td><td class="wide-row">8</td><td class="wide-row">12</td></tr>
+        <tr><td>5</td><td class="wide-row">Object oriented programming</td><td class="wide-row">6</td><td class="wide-row">10</td></tr>
+        <tr><td>6</td><td class="wide-row">Software development life cycle</td><td class="wide-row">6</td><td class="wide-row">10</td></tr>
+        <tr><td>7</td><td class="wide-row">Recent Trends in technology</td><td class="wide-row">5</td><td class="wide-row">9</td></tr>
+        <tr><th colspan="2">Total</th><th class="wide-row">50</th><th class="wide-row">80</th></tr>
       </table>
     </div>
     <div class="main">Computer System</div>
@@ -68,6 +81,274 @@
 </dl>
 <h1>Database Management System:</h1>
 <div>A DBMS is a system that allows users to create, modify, and query databases while ensuring data integrity, security, and efficient data access. Unlike traditional file systems, DBMS minimizes data redundancy, prevents inconsistencies, and simplifies data management with features like concurrent access and backup mechanisms. It organizes data into tables, views, schemas, and reports, providing a structured approach to data management.</div>
+<div>The ojectives of a DBMS are:</div>
+<dl>
+        <dt>Data Integrity:</dt>
+    <dd>Ensuring accuracy and consistency of data across the database.</dd>
+        <dt>Data Security:</dt>
+    <dd>Protecting sensitive information through access control and encryption.</dd>
+        <dt>Data Manipulation:</dt>
+    <dd>Providing tools to efficiently modify, update, and retrieve data.</dd>
+        <dt>Data Storage:</dt>
+    <dd>Organizing and storing large amounts of structured data systematically.</dd>
+        <dt>Data Independence:  </dt>
+    <dd>Allowing changes in data structure without affecting application programs.</dd>
+</dl>
+<h1>Advantages and Disadvantages of DBMS</h1>
+<h2>Advantages:</h2>
+<ol>
+    <li>Data organization: A DBMS allows for the organization and storage of data in a structured manner, making it easy to retrieve and query the data as needed.</li>
+    <li>Data integrity: A DBMS provides mechanisms for enforcing data integrity constraints, such as constraints on the values of data and access controls that restrict who can access the data.</li>
+    <li>Concurrent access: A DBMS provides mechanisms for controlling concurrent access to the database, to ensure that multiple users can access the data without conflicting with each other.</li>
+    <li>Data security: A DBMS provides tools for managing the security of the data, such as controlling access to the data and encrypting sensitive data.</li>
+    <li>Backup and recovery: A DBMS provides mechanisms for backing up and recovering the data in the event of a system failure.</li>
+    <li>Data sharing: A DBMS allows multiple users to access and share the same data, which can be useful in a collaborative work environment.</li>
+</ol><br>
+<h2>Disadvantages:</h2>
+<ol>
+    <li>Complexity: DBMS can be complex to set up and maintain, requiring specialized knowledge and skills.</li>
+     <li>Performance overhead: The use of a DBMS can add overhead to the performance of an application, especially in cases where high levels of concurrency are required.</li>
+      <li>Scalability: The use of a DBMS can limit the scalability of an application, since it requires the use of locking and other synchronization mechanisms to ensure data consistency.</li>
+       <li>Cost: The cost of purchasing, maintaining and upgrading a DBMS can be high, especially for large or complex systems.</li>
+        <li>Limited Use Cases: Not all use cases are suitable for a DBMS, some solutions don't need high reliability, consistency or security and may be better served by other types of data storage.</li>
+</ol><br>
+<h1>Types of Database Model:</h1>
+<h2>1.Hierarchical</h2>
+<div>Hierarchical databases organize data in a tree-like structure, where each parent record can have multiple child records. This model works well for scenarios where data follows a predefined hierarchical relationship, where data is arranged in levels or ranks. For example, in a university, "University" is at the top level, while "Departments" and "Administration" are at lower levels, even though they are distinct entities.</div>
+  <br><img src="Hierarchical-DB.png" width="1000px"> <br><br>
+<h2>2.Network</h2>
+<div>A network databases builds on the hierarchical model but allows child records to link to multiple parent records, creating a web-like structure of interconnected data. This results in a more flexible structure, often referred to as a graph model, where entities can be connected in many different ways. For example, in a university database, "Students," "Faculty," and "Resources" can be linked to both "Departments" and "Clubs," forming a flexible, two-directional relationship.</div>
+<br><img src="Network-DB.png" width="1000px"><br><br>
+<h2>3.Relational</h2>
+<Div>Relational databases are the most widely used type of database today. They store data in tables, with rows representing records and columns representing attributes of the records. In this database, every piece of information has a relationship with every other piece of information. This is on account of every data value in the database having a unique identity in the form of a record. Every row of data in the database is linked with another row using a primary key. Similarly, every table is linked with another table using a foreign key.</Div>
+<img src="Capture3231.png" width="1000px"><br><br>
+<h2>4.Entity Relational</h2>
+<div>The Entity-Relationship Model (ER Model) is a conceptual model for designing a databases. This model represents the logical structure of a database, including entities, their attributes and relationships between them.</div>
+<ul>
+    <li>Entity: An objects that is stored as data such as Student, Course or Company.  </li>
+    <li>Attribute: Properties that describes an entity such as StudentID, CourseName, or EmployeeEmail.</li>
+    <li>Relationship: A connection between entities such as "a Student enrolls in a Course".</li>
+</ul>
+<br><img src="ER.png" width="1000px"><br><br>
+<h1>Integrity Constraints and Types:</h1>
+<div>Integrity constraints are a set of rules used in DBMS to ensure that the data in a database is accurate, consistent and reliable. These rules helps in maintaining the quality of data by ensuring that the processes like adding, updating or deleting information do not harm the integrity of the database.<br>
+For example:</div>
+<ul>
+  <li>Making sure every customer has a valid email address.</li>
+  <li>Ensuring that an order in the database is always linked to an existing customer.</li>
+</ul><br>
+<h2>Types of Integrity Constraints</h2>
+<dl>
+  <dt>Domain Constraints</dt>
+  <dd>Domain constraints are a type of integrity constraint that ensure the values stored in a column (or attribute) of a database are valid and within a specific range or domain. In simple terms, they define what type of data is allowed in a column and restrict invalid data entry.</dd>
+  <dt>Entity Integrity Constraints</dt>
+  <dd>Entity integrity constraints state that primary key can never contain null value because primary key is used to determine individual rows in a relation uniquely, if primary key contains null value then we cannot identify those rows. A table can contain null value in it except primary key field.</dd>
+    <dt>Key Constraints</dt>
+  <dd>Key constraints ensure that certain columns or combinations of columns in a table uniquely identify each row. These rules are essential for maintaining data integrity and preventing duplicate or ambiguous records. Key constraint themselfs can further be calssified into:<br><br>
+  <dl>
+      <Dt>Primary Key Constraints</Dt>
+      <dd>It states that the primary key attributes are required to be unique and not null. That is, primary key attributes of a relation must not have null values and primary key attributes of two tuples must never be same. </dd>
+      <dt>Unique Key Constraints</dt>
+      <dd>A Unique Key ensures that the values in a column are unique, but unlike a primary key, it allows one NULL value.</dd>
+    </dl>
+  </dd>
+    <dt>Referential integrity constraints</dt>
+  <dd>Referential integrity constraints are rules that ensure relationships between tables remain consistent. They enforce that a foreign key in one table must either match a value in the referenced primary key of another table or be NULL. This guarantees the logical connection between related tables in a relational database.</dd>
+</dl><br><br>
+<h1>Normalization</h1>
+<dIv>Normalization is an important process in database design that helps improve the database's efficiency, consistency, and accuracy. It makes it easier to manage and maintain the data and ensures that the database is adaptable to changing business needs.<br><br>
+The primary objective for normalizing the relations is to eliminate anomalies. Failure to reduce anomalies results in data redundancy, which may threaten data integrity and cause additional issues as the database increases.</dIv>
+<h2>Normal Forms</h2>
+<div>Normal Forms are different stages of normalization, and each stage imposes certain rules to improve the structure and performance of a database. There are many normal forms but currently we only require 3 normal forms. They are:</div>
+<dl>
+  <dt>1.1NF</dt>
+  <Dd>A table is in 1NF if it satisfies the following conditions:<br><br>
+  <ul>
+    <li>All columns contain atomic values (i.e., indivisible/single values).</li>
+     <li>Each row is unique (i.e., no duplicate rows).</li>
+      <li>Each column has a unique name.</li>
+       <li>The order in which data is stored does not matter.</li>
+  </ul></Dd>
+  <dt>2.2NF</dt>
+  <dd>A relation is in 2NF if it satisfies the conditions of 1NF and additionally. No partial dependency exists, meaning every non-prime attribute (non-key attribute) must depend on the entire primary key, not just a part of it.</dd>
+  <Dt>3.3NF</Dt>
+  <dd>A relation is in 3NF if it satisfies 2NF and additionally, there are no transitive dependencies. In simpler terms, non-prime attributes should not depend on other non-prime attributes.</dd>
+</dl><br>
+<h2>Advantages of Normal Form</h2>
+<ol>
+  <li>Reduced data redundancy: Normalization helps to eliminate duplicate data in tables, reducing the amount of storage space needed and improving database efficiency.</li>
+  <li>Improved data consistency: Normalization ensures that data is stored in a consistent and organized manner, reducing the risk of data inconsistencies and errors.</li>
+  <li>Simplified database design: Normalization provides guidelines for organizing tables and data relationships, making it easier to design and maintain a database.</li>
+  <li>Improved query performance: Normalized tables are typically easier to search and retrieve data from, resulting in faster query performance.</li>
+  <li>Easier database maintenance: Normalization reduces the complexity of a database by breaking it down into smaller, more manageable tables, making it easier to add, modify, and delete data.</li>
+</ol><br>
+<h2>Disadvantages of Normal Form</h2>
+<ol>
+  <li>Complex Queries: Too many tables may result in multiple joins, making queries slow and difficult to manage.</li>
+  <li>Performance Overhead: Additional processing required for joins in overly normalized databases may hurt performance, especially in large-scale systems.</li>
+</ol>
+<br><br>
+<h1>Centralized Database</h1>
+<div>A Centralized Database is a type of database that is stored, located as well as maintained at a single location only. This type of database is modified and managed from that location itself.</div>
+<h2>Advantages</h2>
+<ul>
+  <li>Since all data is stored at a single location only thus it is easier to access and coordinate data.</li>
+  <li>The centralized database has very minimal data redundancy since all data is stored in a single place.</li>
+  <li>It is cheaper in comparison to all other databases available.</li>
+</ul><br>
+<h2>Disadvantages</h2>
+<ul>
+  <li>The data traffic in the case of a centralized database is more.</li>
+  <Li>If any kind of system failure occurs in the centralized system then the entire data will be destroyed.</Li>
+</ul><br><br>
+<h1>Distributed Database</h1>
+<div>A distributed database is basically a type of database which consists of multiple databases that are connected with each other and are spread across different physical locations. The data that is stored in various physical locations can thus be managed independently of other physical locations.</div>
+<br><h2>Advantages</h2>
+<ul>
+  <li>This database can be easily expanded as data is already spread across different physical locations.</li>
+  <li>The distributed database can easily be accessed from different networks.</li>
+  <li>This database is more secure in comparison to a centralized database.</li>
+</ul><br>
+<h2>Disadvantages</h2>
+<ul>
+  <li>This database is very costly and is difficult to maintain because of its complexity.</li>
+  <li>In this database, it is difficult to provide a uniform view to users since it is spread across different physical locations.</li>
+</ul><br><br>
+<h1>Difference Between Centralized database and Distributed Database</h1>
+<div class="syllabus-container"> 
+<table class="">
+  <tr>
+    <th>Basis of Comparison</th>
+    <th>Centralized Database</th>
+    <th>Distributed Database</th>
+  </tr>
+  <tr>
+    <td>Definition</td>
+    <td>Stored and maintained at a single location.</td>
+    <td>Consists of multiple databases across different locations.</td>
+  </tr>
+  <tr>
+    <td>Access Time</td>
+    <td>Higher for multiple users.</td>
+    <td>Lower for multiple users.</td>
+  </tr>
+  <tr>
+    <td>Data Management</td>
+    <td>Easier due to a single location.</td>
+    <td>Complex due to multiple locations.</td>
+  </tr>
+  <tr>
+    <td>View</td>
+    <td>Uniform and complete.</td>
+    <td>May not be uniform.</td>
+  </tr>
+  <tr>
+    <td>Data Consistency</td>
+    <td>More consistent.</td>
+    <td>Less consistent due to possible redundancy.</td>
+  </tr>
+  <tr>
+    <td>Failure Handling</td>
+    <td>Failure blocks access completely.</td>
+    <td>Failure affects only part of the system.</td>
+  </tr>
+  <tr>
+    <td>Cost</td>
+    <td>Less expensive.</td>
+    <td>More expensive.</td>
+  </tr>
+  <tr>
+    <td>Maintenance</td>
+    <td>Easier due to a single location.</td>
+    <td>Difficult due to distributed nature.</td>
+  </tr>
+</table>
+</div><br><br>
+<h1>Database Security:</h1>
+<div>Database security refers to the measures and strategies used to protect databases from unauthorized access, cyber threats, and data corruption. It ensures confidentiality, integrity, and availability of stored information.</div>
+<h2>Challenges</h2>
+<div>Database security faces several challenges due to evolving cyber threats, system vulnerabilities, and human errors. Here are some key challenges:</div>
+<ol>
+  <li>Unauthorized Access</li>
+  <li>SQL Injection Attacks</li>
+  <li>Data Breaches</li>
+  <li>Malware & Ransomware</li>
+  <li>Denial-of-Service (DoS) Attacks etc.</li>
+</ol><br>
+<h2>Security Measures</h2>
+<ol>
+  <lI>Access Control</lI>
+  <li>Data Encryption</li>
+  <li>Regular Backups</li>
+  <li>SQL Injection Prevention</li>
+  <li>Database Auditing & Monitoring</li>
+</ol>
+<br><h2>Database Administrator (DBA)</h2>
+<div>A Database Administrator (DBA) is responsible for managing, securing, and optimizing a database system to ensure efficient data storage, retrieval, and integrity. Their role is crucial in maintaining the reliability and performance of databases.</div>
+<br><h2>Key Responsibilities of a DBA</h2>
+<ol>
+  <li>Database Installation & Configuration – Setting up database software and ensuring proper system integration.</li>
+  <lI>Data Security & Access Control – Implementing authentication, encryption, and access restrictions to protect sensitive data.</lI>
+  <li>Backup & Recovery – Creating regular backups and disaster recovery plans to prevent data loss.</li>
+  <li>Monitoring & Troubleshooting – Identifying and resolving database issues to ensure smooth operation.</li>
+  <li>Data Integrity & Consistency – Enforcing rules to maintain accurate and reliable data.</li>
+</ol>
+<h1>SQL DATATYPES</h1>
+<div>SQL data types define the kind of data that can be stored in a database column. They ensure data integrity, efficiency, and compatibility across different database systems.</div>
+<dl>
+    <dt>CHAR</dt>
+    <dd>Fixed-length string with a maximum length of 255 characters.</dd>
 
-  </body>
+    <dt>VARCHAR</dt>
+    <dd>Variable-length string with a maximum length of 65,535 characters.</dd>
+
+    <dt>BINARY</dt>
+    <dd>Fixed-length binary data with a maximum length of 255 bytes.</dd>
+
+    <dt>VARBINARY</dt>
+    <dd>Variable-length binary data with a maximum length of 65,535 bytes.</dd>
+
+    <dt>TINYBLOB</dt>
+    <dd>Binary data with a maximum length of 255 bytes.</dd>
+
+    <dt>TINYTEXT</dt>
+    <dd>Text data with a maximum length of 255 characters.</dd>
+
+    <dt>TEXT</dt>
+    <dd>Text data with a maximum length of 65,535 characters.</dd>
+
+    <dt>LONGTEXT</dt>
+    <dd>Text data with a maximum length of 4,294,967,295 characters.</dd>
+
+    <dt>ENUM</dt>
+    <dd>String object with a value chosen from a list of permitted values.</dd>
+
+    <dt>BIT</dt>
+    <dd>Bit-field type that can hold a single bit or a series of bits.</dd>
+
+    <dt>TINYINT</dt>
+    <dd>Integer with a range of -128 to 127 (or 0 to 255 unsigned).</dd>
+
+    <dt>BOOLEAN</dt>
+    <dd>Represents a true or false value, typically stored as TINYINT.</dd>
+
+    <dt>INTEGER</dt>
+    <dd>Standard integer type with a range of -2,147,483,648 to 2,147,483,647.</dd>
+
+    <dt>FLOAT</dt>
+    <dd>Single-precision floating-point number.</dd>
+
+    <dt>DOUBLE</dt>
+    <dd>Double-precision floating-point number.</dd>
+
+    <dt>DECIMAL</dt>
+    <dd>Fixed-point number with a specified precision and scale.</dd>
+
+    <dt>DATE</dt>
+    <dd>Stores date values (YYYY-MM-DD).</dd>
+
+    <dt>DATETIME</dt>
+    <dd>Stores date and time values (YYYY-MM-DD HH:MM:SS).</dd>
+</dl>
+</body>
 </html>
