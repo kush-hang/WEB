@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Database Management System</title>
+    <link rel="stylesheet" href="Web.css" />
+  </head>
+  <body>
+    <div class="sidenav">
+<a href="DBMS.html" >Chapter 1 DBMS</a>
+<a href="C Functions.html" class="active">Chapter 2 C-Programming</a>
+</div>
+<div class="body">
+    <div class="main">C Programming</div>
+    <h1>Functions</h1>
+    <div>A function is a reusable block of code designed to perform a specific task.</div>
+    <pre>
+        Syntax:
+        return type function (paramater list);
+        {
+            Statement;
+        }
+    </pre><br>
+    <h1>
+        Types of Functions:
+    </h1>
+    <dl>
+        <dt>1.Library Functions:</dt>
+        <dd>The functions which are predeifined in a header file are called library functions. e.g: scanf, prinf</dd>
+        <dt>2.User Defined Functions:</dt>
+        <dd>The functions defined by the programmer according to requirement are called user defined finctions.</dd>
+    </dl><br>
+    <h1>Compoents of function</h1>
+    <dl>
+    <dt>i. Function Prototype</dt>
+    <dd>
+      A declaration that tells the compiler about the function's name, return type, and parameters before its actual definition.<br>
+      <strong>Example:</strong> <code>int add(int a, int b);</code>
+    </dd>
+
+    <dt>ii. Function Call</dt>
+    <dd>
+      Invokes the function to execute its task. Arguments are passed that match the parameters.<br>
+      <strong>Example:</strong> <code>int result = add(5, 3);</code>
+    </dd>
+
+    <dt>iii. Function Definition</dt>
+    <dd>
+      The actual body of the function where logic is written.<br>
+      <strong>Example:</strong> <code>int add(int a, int b) { return a + b; }</code>
+    </dd>
+
+    <dt>iv. Return Type</dt>
+    <dd>
+      Specifies the type of value the function returns, such as <code>int</code>, <code>float</code>, or <code>void</code>.<br>
+      <strong>Example:</strong> <code>float calculateArea(float radius);</code>
+    </dd>
+  </dl>
+  <h1>Categories of Function</h1>
+  <dl>
+    <dt>i. Function with return type but no arguments</dt>
+    <dd>
+        <pre>
+            #include &ltstdio.h&gt
+            int sum(); //function prototype
+            int main()
+            {
+                int S=sum();
+                printf ("%d",S);
+                printf ("Kushahang Subba");
+                return 0;
+            }
+            int sum() //function definition
+            {
+                int a,b;
+                printf ("Enter two numbers");
+                scanf ("%d %d",&a,&b);
+                return a+b;;
+            }
+            <img src="C.1.png">
+        </pre>
+    </dd>
+    <dt>ii. Function with return type with arguments</dt>
+    <dd>
+        <pre>
+            #include &ltstdio.h&gt
+            int sum(int,int); //function prototype
+            int main()
+            {
+                int S=sum(4,5);
+                printf ("%d",S);
+                printf ("Kushahang Subba");
+                return 0;
+            }
+            int sum (int a, int b)
+            {
+                return a+b;
+            }
+            <img src="C.2.png">
+        </pre>
+    </dd>
+    <dt>iii. Function with no return type with no arguments</dt>
+    <dd><pre>
+            #include &ltstdio.h&gt
+            void sum(); //function prototype
+            int main()
+            {
+               sum ();
+               printf ("Kushahang Subba");
+                return 0;
+            }
+            void sum ()
+            {
+                int a,b,s;
+                printf ("Enter two numbers");
+                scanf ("%d %d",&a,&b);
+                s=a+b;
+                printf ("Sum is %d",s);
+            }
+            <img src="C.3.png">
+    </pre></dd>
+    <dt>iv. Function with no return type with arguments</dt>
+    <dd>
+        <pre>
+             #include &ltstdio.h&gt
+            void sum(int,int); //function prototype
+            int main()
+            {
+               int a,b;
+               printf ("Enter two numbers");
+               scanf ("%d %d",&a,&b);
+               sum (a,b);
+               printf ("Kushahang Subba");
+               return 0;
+            }
+            void sum (int a,int b)
+            {
+                int s;
+                s=a+b;
+                printf ("The sum is %d",s);
+
+            }
+            <img src="C.4.png">
+        </pre>
+    </dd>
+  </dl>
+  <h1>Storage Class</h1>
+  <dl>
+    <dt>1. Atomatic Storage Class</dt>
+    <dd>
+        <ul>
+            <li>It is the default value for all local variables (Default:Garbage)</li>
+            <li>It is stored in th RAM</li>
+            <li>It is local in scope and lasts until the function ends</li>
+        </ul>
+    </dd>
+    <dt>2. External Storage Class</dt>
+    <dd>
+        <ul>
+            <li>It is global in scope meaning it can be used in any part of the program</li>
+            <li>Its default value is 0</li>
+            <li>Its lifetime is the programs lifetime</li>
+        </ul></dd>
+        <dt>3. Register Storage Class</dt>
+        <dd>
+            <ul>
+                <li>It is stored in the registers of the CPU meaning it is faster to access</li>
+                <li>It is limited in scope to a singular block</li>
+                <li>It lifetime is the same as Auto (until the function ends)</li>
+            </ul></dd>
+    <dt>4. Static Storage Class</dt>
+    <dd>
+        <ul>
+            <li>It retains it value between function calls and will last till the end of the program</li>
+            <li>It is stored in the ram and has a default value of 0</li>
+            <li>It is limited to a function</li>
+        </ul>
+    </dd>
+  </dl>
+  <h1>Recursive Function</h1>
+  <div>The function which calls itself is called a recursive function. The act of using a recursive function to repeat statements multiple times in a loop is known as recursion.
+    <br>Syntax:<br>
+    <pre>
+        
+     return type function (paramater list);
+        {
+            Statement;
+            function (new parameter list);
+        }
+    </pre>
+    <br>Some uses of recursion are:<br>
+    <pre>
+            Fibonacci series
+
+            #include &ltstdio.h&gt
+            int fibo(int);
+            int main()
+            {
+               int f,i,n;
+               printf ("Enter value of n");
+               scanf ("%d",&n);
+               for (i=0; i&lt& n; i++)
+               {
+                printf ("%d",fibo(i));
+               }
+               printf ("Kushahang Subba");
+               return 0;
+            }
+            int fibo (int n)
+            {
+                if (n==0 || n==1)
+                return n;
+                else 
+                return fibo (n-1)+fibo(n-2);
+            }
+            <img src="C.FIBO.png">
+
+            HCF
+
+            #include #include &ltstdio.h&gt
+            int HCF(int,int);
+            int main()
+            {
+               int a,b;
+               printf ("Enter enter two numbers");
+               scanf ("%d %d",&a;,&b);
+               printf ("The HCF is %d",HCF(a,b));
+               printf ("Kushahang Subba");
+               return 0;
+            }
+            int HCF (int a,int b)
+            {
+                int r,q;
+                if (a>b)
+                {
+                    q=a/b;
+                    r=a-(b*q);
+                }
+                else
+                {
+                    q=b/a;
+                    r=b-(a*q);
+                }
+
+                if (r==0)
+                return b;
+                else 
+                return HCF (b,r);
+            }
+            
+            <img src="C.HCF.png">
+    </pre>
+    <h1>Passing Array in Function</h1>
+    <pre>
+            #include &ltstdio.h&gt
+            void change(int[]);
+            int main()
+            {
+               int a[5]={2,3,4,5,6};
+               change(a);
+               printf ("Array elements are:\n");
+               int i;
+               for (i=0; i &lt& 5; i++)
+               {
+                printf ("%d \t",a[i]);
+               }
+               printf ("Kushahang Subba");
+               return 0;
+            }
+            void change (int a[])
+            {
+             int i;
+             for (i=0; i &lt  5, i++)
+             {
+                a[i]=a[i]+10;
+             }
+            }
+            <img src="C.ARRAY.png">
+    </pre>
+  </div>
+</div>
