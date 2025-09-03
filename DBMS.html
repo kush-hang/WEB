@@ -14,6 +14,7 @@
   </head>
   <body>
     <div class="sidenav">
+<a  href="Home.html">Home</a>
 <a href="DBMS.html" class="active">Chapter 1 DBMS</a>
 <a href="C Functions.html" >Chapter 2 C-Programming</a>
 </div>
@@ -293,6 +294,122 @@ The primary objective for normalizing the relations is to eliminate anomalies. F
   <li>Monitoring & Troubleshooting – Identifying and resolving database issues to ensure smooth operation.</li>
   <li>Data Integrity & Consistency – Enforcing rules to maintain accurate and reliable data.</li>
 </ol>
+<h1>SQL(DDL and DML)</h1>
+<dl>
+  <dt>Data Constraints</dt>
+  <dd>
+    Data constraints in database management systems are rules applied to columns to maintain data integrity and consistency. The constraints mentioned are:<br>
+    <dl>
+      <dt>NOT NULL:</dt>
+      <dd>This constraint ensures that a column cannot contain NULL values. If a column is defined as NOT NULL, every row in that column must have a value, preventing missing or undefined data.</dd>
+      <dt>UNIQUE:</dt>
+      <dd>This constraint guarantees that all values in a specific column or a set of columns are unique. No two rows can have the same value in a column defined with the UNIQUE constraint. </dd>
+      <dt>PRIMARY KEY:</dt>
+      <dd>A PRIMARY KEY is a special type of constraint that uniquely identifies each record in a table. It combines the properties of both NOT NULL and UNIQUE constraints, meaning a primary key column cannot contain NULL values and all its values must be unique.</dd>
+      <dt>AUTO INCREMENT</dt>
+      <dd>This property automatically generates a unique sequential number for a column when a new record is inserted into the table. It is commonly used with primary keys to provide a simple, automatically generated unique identifier for each row, avoiding manual assignment and potential duplicates.</dd>
+    </dl>
+  </dd>
+  <dt>Operators</dt>
+  <dd>In a Database Management System (DBMS), logical operators like AND, OR, and NOT are used primarily in SQL queries and relational algebra to filter and manipulate data based on specific conditions.
+    <br><br><dl>
+      <dt>1.AND Operator</dt>
+      <dd>Combines two conditions and returns rows only if both conditions are true.
+        <pre>eg:
+SELECT * FROM Students
+WHERE Grade = 'A' AND Age < 18;
+</pre></dd>
+<dt>2.OR Operator</dt>
+<dd>Combines two conditions and returns rows if either condition is true.
+  <pre>eg:
+SELECT * FROM Students
+WHERE Grade = 'A' OR Age < 18;
+  </pre>
+</dd>
+<dt>3.NOT Operator</dt>
+<dd>Negates a condition; returns rows where the condition is not true.
+  <pre>eg:
+SELECT * FROM Students
+WHERE NOT Grade = 'F';
+  </pre>
+</dd>
+      </dl></dl>
+      <h1>Where Clause</h1>
+      <div>The WHERE clause in SQL is used to filter records based on specific conditions. It allows you to retrieve, update, or delete only the rows that meet the criteria so specified.<br>
+      Syntax:<pre>SELECT column1, column2, ...
+FROM table_name
+WHERE condition;
+</pre></div>
+    <br>
+    <h1>Order By Clause</h1>
+    <div>The ORDER BY clause in SQL is used to sort the result set of a query based on one or more columns. It helps organize the output in a meaningful way, either in ascending (ASC) or descending (DESC) order.
+      <br>Synatx:<pre>SELECT column1, column2, ...
+FROM table_name
+ORDER BY column1 [ASC|DESC], column2 [ASC|DESC], ...;
+</pre>
+    </div>
+    <br>
+    <h1>SQL Join</h1>
+    <dl>
+      <dt>1. INNER JOIN</dt>
+      <dd>Returns only the rows where there is a match in both tables.</dd>
+      <dt>2. LEFT JOIN</dt>
+      <dd>Returns all rows from the left table , and matched rows from the right table. If no match, NULLs are returned.</dd>
+      <dt>3. RIGHT JOIN</dt>
+      <dd>Returns all rows from the right table, and matched rows from the left table. If no match, NULLs are returned.</dd>
+      <dt>4. FULL JOIN</dt>
+      <dd>Returns all rows when there is a match in one of the tables. If there is no match, NULLs are returned for missing side.</dd>
+    </dl>
+    <div>
+      <h2>Students Table</h2>
+  <table style="width: 300px;">
+    <tr><th>StudentID</th><th>Name</th></tr>
+    <tr><td>1</td><td>Alice</td></tr>
+    <tr><td>2</td><td>Bob</td></tr>
+    <tr><td>3</td><td>Carol</td></tr>
+  </table>
+
+  <h2>Courses Table</h2>
+  <table style="width: 300px;">
+    <tr><th>CourseID</th><th>StudentID</th><th>CourseName</th></tr>
+    <tr><td>101</td><td>1</td><td>Math</td></tr>
+    <tr><td>102</td><td>2</td><td>Science</td></tr>
+    <tr><td>103</td><td>4</td><td>History</td></tr>
+  </table>
+  <h2>INNER JOIN Result</h2>
+  <table style="width: 300px;">
+    <tr><th>Name</th><th>CourseName</th></tr>
+    <tr><td>Alice</td><td>Math</td></tr>
+    <tr><td>Bob</td><td>Science</td></tr>
+  </table>
+
+  <h2>LEFT JOIN Result</h2>
+  <table style="width: 300px;">
+    <tr><th>Name</th><th>CourseName</th></tr>
+    <tr><td>Alice</td><td>Math</td></tr>
+    <tr><td>Bob</td><td>Science</td></tr>
+    <tr><td>Carol</td><td>NULL</td></tr>
+  </table>
+
+  <h2>RIGHT JOIN Result</h2>
+  <table style="width: 300px;">
+    <tr><th>Name</th><th>CourseName</th></tr>
+    <tr><td>Alice</td><td>Math</td></tr>
+    <tr><td>Bob</td><td>Science</td></tr>
+    <tr><td>NULL</td><td>History</td></tr>
+  </table>
+
+  <h2>FULL OUTER JOIN Result</h2>
+  <table style="width: 300px;">
+    <tr><th>Name</th><th>CourseName</th></tr>
+    <tr><td>Alice</td><td>Math</td></tr>
+    <tr><td>Bob</td><td>Science</td></tr>
+    <tr><td>Carol</td><td>NULL</td></tr>
+    <tr><td>NULL</td><td>History</td></tr>
+  </table>
+</div>
+  </dd>
+</dl>
 <h1>SQL DATATYPES</h1>
 <div>SQL data types define the kind of data that can be stored in a database column. They ensure data integrity, efficiency, and compatibility across different database systems.</div>
 <dl>

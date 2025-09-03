@@ -6,6 +6,7 @@
   </head>
   <body>
     <div class="sidenav">
+<a  href="Home.html">Home</a>
 <a href="DBMS.html" >Chapter 1 DBMS</a>
 <a href="C Functions.html" class="active">Chapter 2 C-Programming</a>
 </div>
@@ -176,6 +177,10 @@
         </ul>
     </dd>
   </dl>
+  <h1>Variable and Its Scope</h1>
+  <div>
+    Variables come in two forms (interms of scope), <b>Global</b> and <b>Local</b> varibables. While a local variable and its value is limited to a single function or block of a porgram a global varialbe can be used anywhere in the program.
+  </div>
   <h1>Recursive Function</h1>
   <div>The function which calls itself is called a recursive function. The act of using a recursive function to repeat statements multiple times in a loop is known as recursion.
     <br>Syntax:<br>
@@ -249,6 +254,31 @@
             
             <img src="C.HCF.png">
     </pre>
+
+<br>
+  <table>
+    <caption><b>Recursive Function: Advantages vs Disadvantages</b></caption>
+    <tr>
+      <th>Advantages</th>
+      <th>Disadvantages</th>
+    </tr>
+    <tr>
+      <td>Reduces code complexity for problems like factorial, Fibonacci, and tree traversal.</td>
+      <td>Can lead to stack overflow if recursion depth is too high.</td>
+    </tr>
+    <tr>
+      <td>Elegant and clean solution for divide-and-conquer problems.</td>
+      <td>May be less efficient due to repeated function calls and memory usage.</td>
+    </tr>
+    <tr>
+      <td>Helps solve problems that are naturally recursive (e.g., HCF, permutations).</td>
+      <td>Harder to debug and understand for beginners.</td>
+    </tr>
+    <tr>
+      <td>Can replace complex loops with simpler recursive logic.</td>
+      <td>Requires careful base case handling to avoid infinite recursion.</td>
+    </tr>
+  </table><br>
     <h1>Passing Array in Function</h1>
     <pre>
             #include &ltstdio.h&gt
